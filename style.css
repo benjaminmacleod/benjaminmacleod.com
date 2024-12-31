@@ -82,3 +82,7 @@ hr.primary {
     width: 100%;
     height: 100%;
 }
+
+.videoDiv {
+    padding-bottom: 20px;
+}
