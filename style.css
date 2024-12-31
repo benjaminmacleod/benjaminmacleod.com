@@ -119,7 +119,12 @@ hr.primary {
 
 /* Mobile Media Screen */
 @media screen and (max-width: 767px){
- h1 {
+    
+body {
+    margin-left: 10px;
+    margin-right: 10px;        
+}
+h1 {
     font-size: 2em !important;
  }
 h2 {
