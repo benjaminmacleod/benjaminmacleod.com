@@ -116,3 +116,19 @@ hr.primary {
 .videoDiv {
     padding-bottom: 20px;
 }
+
+/* Mobile Media Screen */
+@media screen and (max-width: 767px){
+ h1 {
+    font-size: 2em !important;
+ }
+h2 {
+    font-size: 2em !important;
+ }
+h3 {
+    font-size: 2em !important;
+ }
+p {
+    font-size: 2em !important;
+ }
+}
