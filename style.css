@@ -116,7 +116,15 @@ hr.primary {
 .videoDiv {
     padding-bottom: 20px;
 }
-
+.footer {
+    font-family: "IBM Plex Mono";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #EEEEEE;
+    padding-bottom: 10px;
+}
+}
 /* Mobile Media Screen */
 @media screen and (max-width: 767px){
     
@@ -136,4 +144,6 @@ h3 {
 p {
     font-size: 1.2em !important;
  }
+.footer {
+    font-size: 16px !important;
 }
