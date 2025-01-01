@@ -137,8 +137,13 @@ hr.primary {
   background-size: cover;
   background-position: center;
   transition: background-image 0.3s ease;
+  transform: scale(1);
+  will-change: background-image, transform;
 }
 
+.social-icon:hover {
+  transform: scale(1); /* Ensure no size change */
+}
 .social-icon.email {
   background-image: url('assets/social/email.svg');
 }
