@@ -136,9 +136,6 @@ hr.primary {
   display: block;
   background-size: cover;
   background-position: center;
-  transition: background-image 0.3s ease;
-  transform: scale(1);
-  will-change: background-image, transform;
 }
 
 .social-icon:hover {
