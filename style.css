@@ -4,11 +4,13 @@ body {
     background-color: #222831;
     margin-left: 35px;
     margin-right: 35px;
+    height: 100%;
 }
 
 .content {
   max-width: 767px;
   margin: auto;
+  min-height: 100vh;
 }
 
 h1 {
@@ -69,6 +71,15 @@ a {
     text-underline-offset: 10px;
 }
 
+a.noDecoration {
+    text-decoration: none;
+}
+
+a.noDecoration:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
 a.italics {
     font-family: "IBM Plex Mono";
     font-weight: 500;
@@ -89,6 +100,7 @@ a:hover {
     text-decoration: underline;
     text-decoration-style: dashed;
     text-underline-offset: 10px;
+    cursor: pointer;
 }
 
 a.italics:hover {
@@ -100,6 +112,28 @@ a.italics:hover {
    text-decoration: underline;
     text-decoration-style: dashed;
     text-underline-offset: 10px;
+    cursor: pointer;
+}
+a.pLink {
+    font-family: "IBM Plex Mono";
+    font-weight: 600;
+    font-style: normal;
+    color: #EEEEEE;
+    padding-bottom: 10px;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 5px;
+}
+a.pLink:hover {
+    font-family: "IBM Plex Mono";
+    font-weight: 600;
+    font-style: normal;
+    color: #76ABAE;
+    padding-bottom: 10px;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 5px;
+    cursor: pointer;
 }
 
 hr.primary {
@@ -130,7 +164,6 @@ hr.primary {
     font-style: normal;
     font-size: 16px;
     color: #EEEEEE;
-    padding-bottom: 10px;
 }
 
 .social-media-sharesheet {
