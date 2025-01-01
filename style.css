@@ -124,7 +124,62 @@ hr.primary {
     color: #EEEEEE;
     padding-bottom: 10px;
 }
+
+.social-media-sharesheet {
+  display: flex;
+  gap: 10px; /* Spacing between icons */
 }
+
+.social-icon {
+  width: 34px; /* Adjust to your icon size */
+  height: 24px;
+  display: block;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.3s ease;
+}
+
+.social-icon.email {
+  background-image: url('assets/social/email.svg');
+}
+
+.social-icon.email:hover {
+  background-image: url('assets/social/email_hover.svg');
+}
+
+.social-icon.facebook {
+  background-image: url('assets/social/facebook.svg');
+}
+
+.social-icon.facebook:hover {
+  background-image: url('assets/social/facebook_hover.svg');
+}
+
+.social-icon.linkedin {
+  background-image: url('assets/social/linkedin.svg');
+}
+
+.social-icon.linkedin:hover {
+  background-image: url('assets/social/linkedin_hover.svg');
+}
+
+.social-icon.instagram {
+  background-image: url('assets/social/instagram.svg');
+}
+
+.social-icon.instagram:hover {
+  background-image: url('assets/social/instagram_hover.svg');
+}
+
+.social-icon.youtube {
+  background-image: url('assets/social/youtube.svg');
+}
+
+.social-icon.youtube:hover {
+  background-image: url('assets/social/youtube_hover.svg');
+}
+
+
 /* Mobile Media Screen */
 @media screen and (max-width: 767px){
     
@@ -144,4 +199,4 @@ h3 {
 p {
     font-size: 1.2em !important;
  }
-
+}
