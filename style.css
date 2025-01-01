@@ -64,7 +64,9 @@ a {
     font-style: normal;
     color: #EEEEEE;
     padding-bottom: 10px;
-    text-decoration: underline dashed;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 10px;
 }
 
 a.italics {
@@ -73,7 +75,9 @@ a.italics {
     font-style: italic;
     color: #EEEEEE;
     padding-bottom: 10px;
-    text-decoration: underline dashed;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 10px;
 }
 
 a:hover {
@@ -82,7 +86,9 @@ a:hover {
     font-style: normal;
     color: #76ABAE;
     padding-bottom: 10px;
-    text-decoration: underline dashed;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 10px;
 }
 
 a.italics:hover {
@@ -91,7 +97,9 @@ a.italics:hover {
     font-style: italic;
     color: #76ABAE;
     padding-bottom: 10px;
-    text-decoration: underline dashed;
+   text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 10px;
 }
 
 hr.primary {
