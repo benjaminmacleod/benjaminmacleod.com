@@ -131,7 +131,7 @@ hr.primary {
 }
 
 .social-icon {
-  width: 24px; /* Adjust to your icon size */
+  width: 34px; /* Adjust to your icon size */
   height: 24px;
   display: block;
   background-size: cover;
@@ -146,42 +146,62 @@ hr.primary {
 }
 .social-icon.email {
   background-image: url('assets/social/email.svg');
+  width: 34px; /* Adjust to your icon size */
+  height: 24px;
 }
 
 .social-icon.email:hover {
   background-image: url('assets/social/email_hover.svg');
+  width: 34px; /* Adjust to your icon size */
+  height: 24px;
 }
 
 .social-icon.facebook {
   background-image: url('assets/social/facebook.svg');
+  width: 34px; /* Adjust to your icon size */
+  height: 24px;
 }
 
 .social-icon.facebook:hover {
   background-image: url('assets/social/facebook_hover.svg');
+  width: 34px; /* Adjust to your icon size */
+  height: 24px;
 }
 
 .social-icon.linkedin {
   background-image: url('assets/social/linkedin.svg');
+  width: 34px; /* Adjust to your icon size */
+  height: 24px;
 }
 
 .social-icon.linkedin:hover {
   background-image: url('assets/social/linkedin_hover.svg');
+  width: 34px; /* Adjust to your icon size */
+  height: 24px;
 }
 
 .social-icon.instagram {
   background-image: url('assets/social/instagram.svg');
+  width: 34px; /* Adjust to your icon size */
+  height: 24px;
 }
 
 .social-icon.instagram:hover {
   background-image: url('assets/social/instagram_hover.svg');
+  width: 34px; /* Adjust to your icon size */
+  height: 24px;
 }
 
 .social-icon.youtube {
   background-image: url('assets/social/youtube.svg');
+  width: 34px; /* Adjust to your icon size */
+  height: 24px;
 }
 
 .social-icon.youtube:hover {
   background-image: url('assets/social/youtube_hover.svg');
+  width: 34px; /* Adjust to your icon size */
+  height: 24px;
 }
 
 
