@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="1000" height="1000"><style>
+    #light-icon {
+      display: inline;
+    }
+    #dark-icon {
+      display: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      #light-icon {
+        display: none;
+      }
+      #dark-icon {
+        display: inline;
+      }
+    }
+  </style><g id="light-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="1000" height="1000"><g clip-path="url(#SvgjsClipPath1132)"><rect width="1000" height="1000" fill="#eeeeee"></rect><g transform="matrix(2,0,0,2,0,0)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="500" height="500"><svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="500" height="500" fill="#EEEEEE"></rect>
+<path d="M87 145H160.5C181.1 145 196.8 150 207.6 160C218.6 170 224.1 183.6 224.1 200.8C224.1 212.8 221.1 222.4 215.1 229.6C209.3 236.6 200.9 241.7 189.9 244.9V246.7C202.9 249.9 212.9 255.5 219.9 263.5C227.1 271.5 230.7 282.6 230.7 296.8C230.7 314.4 225.1 328.4 213.9 338.8C202.9 349.2 187.4 354.4 167.4 354.4H87V145ZM153.6 322.9C164.4 322.9 172.3 321.1 177.3 317.5C182.3 313.9 184.8 307.3 184.8 297.7V289C184.8 279.4 182.3 272.8 177.3 269.2C172.3 265.6 164.4 263.8 153.6 263.8H130.8V322.9H153.6ZM147.9 233.8C158.5 233.8 166.2 232.1 171 228.7C175.8 225.1 178.2 218.7 178.2 209.5V200.5C178.2 191.3 175.8 185 171 181.6C166.2 178.2 158.5 176.5 147.9 176.5H130.8V233.8H147.9Z" fill="#222831"></path>
+<path d="M373.083 261.1L375.483 202.6H372.783L333.783 310.3L294.783 202.6H292.083L294.483 261.1V354.4H255.483V145H308.583L334.383 215.5H336.783L362.583 145H412.083V354.4H373.083V261.1Z" fill="#222831"></path>
+<rect x="87" y="375" width="325" height="40" fill="#76ABAE"></rect>
+<rect x="87" y="84" width="325" height="40" fill="#76ABAE"></rect>
+</svg></svg></g></g><defs><clipPath id="SvgjsClipPath1132"><rect width="1000" height="1000" x="0" y="0" rx="0" ry="0"></rect></clipPath></defs></svg></g><g id="dark-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="1000" height="1000"><g clip-path="url(#SvgjsClipPath1133)"><rect width="1000" height="1000" fill="#222831"></rect><g transform="matrix(2,0,0,2,0,0)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="500" height="500"><svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="500" height="500" fill="#222831"></rect>
+<path d="M87 145H160.5C181.1 145 196.8 150 207.6 160C218.6 170 224.1 183.6 224.1 200.8C224.1 212.8 221.1 222.4 215.1 229.6C209.3 236.6 200.9 241.7 189.9 244.9V246.7C202.9 249.9 212.9 255.5 219.9 263.5C227.1 271.5 230.7 282.6 230.7 296.8C230.7 314.4 225.1 328.4 213.9 338.8C202.9 349.2 187.4 354.4 167.4 354.4H87V145ZM153.6 322.9C164.4 322.9 172.3 321.1 177.3 317.5C182.3 313.9 184.8 307.3 184.8 297.7V289C184.8 279.4 182.3 272.8 177.3 269.2C172.3 265.6 164.4 263.8 153.6 263.8H130.8V322.9H153.6ZM147.9 233.8C158.5 233.8 166.2 232.1 171 228.7C175.8 225.1 178.2 218.7 178.2 209.5V200.5C178.2 191.3 175.8 185 171 181.6C166.2 178.2 158.5 176.5 147.9 176.5H130.8V233.8H147.9Z" fill="#EEEEEE"></path>
+<path d="M373.083 261.1L375.483 202.6H372.783L333.783 310.3L294.783 202.6H292.083L294.483 261.1V354.4H255.483V145H308.583L334.383 215.5H336.783L362.583 145H412.083V354.4H373.083V261.1Z" fill="#EEEEEE"></path>
+<rect x="87" y="375" width="325" height="40" fill="#76ABAE"></rect>
+<rect x="87" y="84" width="325" height="40" fill="#76ABAE"></rect>
+</svg></svg></g></g><defs><clipPath id="SvgjsClipPath1133"><rect width="1000" height="1000" x="0" y="0" rx="0" ry="0"></rect></clipPath></defs></svg></g></svg>
