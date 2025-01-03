@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+/* Website Layout */
 body {
     background-color: #222831;
     margin-left: 35px;
@@ -13,41 +14,11 @@ body {
     min-height: 100vh;
 }
 
-.header {
-    overflow: hidden;
-    padding-top: 20px;
+hr.primary {
+    border: 0.5px solid #76ABAE;
 }
 
-.header a {
-    float: left;
-    text-align: center;
-    text-decoration: none;
-    line-height: 25px;
-}
-    
-.header h2 {
-    float: left;
-    text-align: center;
-    text-decoration: none;
-    line-height: 25px;
-}
-
-.header h3 {
-    float: left;
-    text-align: center;
-    text-decoration: none;
-    line-height: 25px;
-}
-    
-.header-elements {
-    padding-left: 20px;
-    text-decoration: none;
-}
-
-.header-right {
-    float: right;
-}
-
+/* Main Classes */
 h1 {
     font-family: "IBM Plex Mono";
     font-weight: 700;
@@ -60,22 +31,6 @@ h1 {
 h2 {
     font-family: "IBM Plex Mono";
     font-weight: 700;
-    font-style: normal;
-    color: #EEEEEE;
-}
-
-h2.menu {
-    font-family: "IBM Plex Mono";
-    font-weight: 700;
-    font-style: normal;
-    color: #EEEEEE;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-h2.jobTitle {
-    font-family: "IBM Plex Mono";
-    font-weight: 600;
     font-style: normal;
     color: #EEEEEE;
 }
@@ -111,29 +66,173 @@ a {
     text-decoration: underline;
     text-decoration-style: dashed;
     text-underline-offset: 10px;
-}
-
-a.noDecoration {
-    text-decoration: none;
-}
-
-a.noDecoration:hover {
-    text-decoration: none;
     cursor: pointer;
 }
 
-a.italics {
+a:hover {
+    color: #76ABAE;
+}
+
+li {
     font-family: "IBM Plex Mono";
-    font-weight: 500;
-    font-style: italic;
+    font-weight: 400;
+    font-style: normal;
+    color: #EEEEEE;
+    padding-bottom: 10px;
+}
+
+li::marker {
+    color: #76ABAE;
+}
+
+/* Header */
+.header {
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+.header-title {
+    font-weight: 600;
+}
+
+.header h2 {
+    float: left;
+    text-align: center;
+    text-decoration: none;
+}
+
+.header-right {
+    float: right;
+}
+
+.header h3 {
+    float: left;
+    text-align: center;
+    text-decoration: none;
+}
+
+.header-selected {
+    padding-left: 20px;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.header-elements {
+    padding-left: 20px;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.header a {
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    line-height: 25px;
+}
+
+.header a:hover {
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    line-height: 25px;
+}
+
+/* Social Media Sharesheet */
+.social-media-sharesheet {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    width: 34px;
+    height: 24px;
+    display: block;
+    background-size: cover;
+    background-position: center;
+}
+
+.social-icon.email {
+    background-image: url('assets/social/email.svg');
+    width: 34px;
+    height: 24px;
+}
+
+.social-icon.email:hover {
+    background-image: url('assets/social/email_hover.svg');
+    width: 34px;
+    height: 24px;
+}
+
+.social-icon.linkedin {
+    background-image: url('assets/social/linkedin.svg');
+    width: 34px;
+    height: 24px;
+}
+
+.social-icon.linkedin:hover {
+    background-image: url('assets/social/linkedin_hover.svg');
+    width: 34px;
+    height: 24px;
+}
+
+.social-icon.instagram {
+    background-image: url('assets/social/instagram.svg');
+    width: 34px;
+    height: 24px;
+}
+
+.social-icon.instagram:hover {
+    background-image: url('assets/social/instagram_hover.svg');
+    width: 34px;
+    height: 24px;
+}
+
+.social-icon.youtube {
+    background-image: url('assets/social/youtube.svg');
+    width: 34px;
+    height: 24px;
+}
+
+.social-icon.youtube:hover {
+    background-image: url('assets/social/youtube_hover.svg');
+    width: 34px;
+    height: 24px;
+}
+
+
+/* Video */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-div {
+    padding-bottom: 20px;
+}
+
+/* 404 Page */
+a.p-link {
+    font-family: "IBM Plex Mono";
+    font-weight: 600;
+    font-style: normal;
     color: #EEEEEE;
     padding-bottom: 10px;
     text-decoration: underline;
     text-decoration-style: dashed;
-    text-underline-offset: 10px;
+    text-underline-offset: 5px;
 }
 
-a:hover {
+a.p-link:hover {
     font-family: "IBM Plex Mono";
     font-weight: 600;
     font-style: normal;
@@ -141,8 +240,30 @@ a:hover {
     padding-bottom: 10px;
     text-decoration: underline;
     text-decoration-style: dashed;
-    text-underline-offset: 10px;
+    text-underline-offset: 5px;
     cursor: pointer;
+}
+
+/* Other */
+h2.job-title {
+    font-weight: 600;
+}
+
+a.no-decoration {
+    text-decoration: none;
+}
+
+a.no-decoration:hover {
+    text-decoration: none;
+}
+
+a.italics {
+    font-weight: 500;
+    font-style: italic;
+    padding-bottom: 10px;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 10px;
 }
 
 a.italics:hover {
@@ -157,179 +278,16 @@ a.italics:hover {
     cursor: pointer;
 }
 
-a.pLink {
-    font-family: "IBM Plex Mono";
-    font-weight: 600;
-    font-style: normal;
-    color: #EEEEEE;
-    padding-bottom: 10px;
-    text-decoration: underline;
-    text-decoration-style: dashed;
-    text-underline-offset: 5px;
-}
-
-a.pLink:hover {
-    font-family: "IBM Plex Mono";
-    font-weight: 600;
-    font-style: normal;
-    color: #76ABAE;
-    padding-bottom: 10px;
-    text-decoration: underline;
-    text-decoration-style: dashed;
-    text-underline-offset: 5px;
-    cursor: pointer;
-}
-
-li::marker {
-    color: #76ABAE;
-}
-
-li {
-    font-family: "IBM Plex Mono";
-    font-weight: 400;
-    font-style: normal;
-    color: #EEEEEE;
-    padding-bottom: 10px;
-}
-
-hr.primary {
-    border: 0.5px solid #76ABAE;
-}
-
-.videoWrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
-    overflow: hidden;
-}
-
-.videoWrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.videoDiv {
-    padding-bottom: 20px;
-}
-
-.footer {
-    font-family: "IBM Plex Mono";
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    color: #EEEEEE;
-}
-
-.social-media-sharesheet {
-    display: flex;
-    gap: 10px; /* Spacing between icons */
-}
-
-.social-icon {
-    width: 34px; /* Adjust to your icon size */
-    height: 24px;
-    display: block;
-    background-size: cover;
-    background-position: center;
-}
-
-.social-icon:hover {
-    transform: scale(1); /* Ensure no size change */
-}
-
-.social-icon.email {
-    background-image: url('assets/social/email.svg');
-    width: 34px; /* Adjust to your icon size */
-    height: 24px;
-}
-
-.social-icon.email:hover {
-    background-image: url('assets/social/email_hover.svg');
-    width: 34px; /* Adjust to your icon size */
-    height: 24px;
-}
-
-.social-icon.facebook {
-    background-image: url('assets/social/facebook.svg');
-    width: 34px; /* Adjust to your icon size */
-    height: 24px;
-}
-
-.social-icon.facebook:hover {
-    background-image: url('assets/social/facebook_hover.svg');
-    width: 34px; /* Adjust to your icon size */
-    height: 24px;
-}
-
-.social-icon.linkedin {
-    background-image: url('assets/social/linkedin.svg');
-    width: 34px; /* Adjust to your icon size */
-    height: 24px;
-}
-
-.social-icon.linkedin:hover {
-    background-image: url('assets/social/linkedin_hover.svg');
-    width: 34px; /* Adjust to your icon size */
-    height: 24px;
-}
-
-.social-icon.instagram {
-    background-image: url('assets/social/instagram.svg');
-    width: 34px; /* Adjust to your icon size */
-    height: 24px;
-}
-
-.social-icon.instagram:hover {
-    background-image: url('assets/social/instagram_hover.svg');
-    width: 34px; /* Adjust to your icon size */
-    height: 24px;
-}
-
-.social-icon.youtube {
-    background-image: url('assets/social/youtube.svg');
-    width: 34px; /* Adjust to your icon size */
-    height: 24px;
-}
-
-.social-icon.youtube:hover {
-    background-image: url('assets/social/youtube_hover.svg');
-    width: 34px; /* Adjust to your icon size */
-    height: 24px;
-}
-
 /* Mobile Media Screen */
 @media screen and (max-width: 767px){
     
+    /* Website Layout */
     body {
         margin-left: 20px;
         margin-right: 20px;        
     }
     
-    .header a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-    
-    .header h2 {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-    
-    .header h3 {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-  
-    .header-right {
-        float: none;
-    }
-    
+    /* Main Classes */
     h1 {
         font-size: 2em !important;
     }
@@ -346,4 +304,27 @@ hr.primary {
         font-size: 1.2em !important;
     }
 
+    /* Header */
+    .header h2 {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    
+    .header h3 {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+     
+    .header-right {
+        float: none;
+    }
+    
 }
