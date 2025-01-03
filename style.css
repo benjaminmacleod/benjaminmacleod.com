@@ -43,7 +43,7 @@ body {
   padding-left: 20px;
   text-decoration: none;
 }
-    
+
 .header-right {
   float: right;
 }
@@ -104,7 +104,7 @@ p {
 
 a {
     font-family: "IBM Plex Mono";
-    font-weight: 600;
+    font-weight: 400;
     font-style: normal;
     color: #EEEEEE;
     padding-bottom: 10px;
@@ -295,7 +295,6 @@ hr.primary {
   width: 34px; /* Adjust to your icon size */
   height: 24px;
 }
-
 
 /* Mobile Media Screen */
 @media screen and (max-width: 767px){
