@@ -1,207 +1,329 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-
-/* Website Layout */
-body {
-    background-color: #222831;
-    margin-left: 35px;
-    margin-right: 35px;
-    height: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+body.dark-mode {
+  background-color: #222831;
+  color: #eeeeee;
 }
 
-.content {
+body.dark-mode a {
+  color: #eeeeee;
+}
+
+body.dark-mode .smalltext {
+  color: #76ABAE;
+}
+
+body.dark-mode .resumeTitle {
+  color: #76ABAE;
+}
+
+body.dark-mode a.material-symbols-outlined {
+  color: #F3E891;
+}
+
+
+
+/* You can also add transitions for smooth effect */
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Base styles */
+body {
+  margin: 0;
+  padding: 2em;
+  line-height: 1.6;
+  font-size: 16px;
+    color: #222831;
+  background-color: #ffffff;
+}
+
+.mainContent {
     max-width: 767px;
     margin: auto;
-    min-height: 100vh;
+    min-height: 100vh;}
+
+/* Headings */
+h1, h2, h3, h4, h5 {
+  margin: 1.5em 0 0.5em;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
-hr.primary {
-    border: 0.5px solid #76ABAE;
+h1 { 
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-family: "Inter", sans-serif;
 }
 
-/* Main Classes */
-h1 {
-    font-family: "IBM Plex Mono";
-    font-weight: 700;
-    font-style: normal;
-    color: #EEEEEE;
-    padding-top: 15px;
-    padding-bottom: 10px;
-}
-
-h2 {
-    font-family: "IBM Plex Mono";
-    font-weight: 700;
-    font-style: normal;
-    color: #EEEEEE;
-    font-size: 1.3rem;
-    line-height: 1.6;
+h2 { 
+  font-size: 2rem;
 }
 
 h3 {
-    font-family: "IBM Plex Mono";
-    font-weight: 600;
-    font-style: normal;
-    color: #76ABAE;
-    font-size: 1rem;
+  font-size: 1.75rem;
+    font-weight: 800;
+    font-family: "Inter", sans-serif;
 }
 
 h4 {
-    font-family: "IBM Plex Mono";
-    font-weight: 600;
-    font-style: normal;
-    color: #EEEEEE;
+  font-size: 1.5rem;
+    font-weight: 800;
+    font-family: "Inter", sans-serif;
 }
 
+h5 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-family: "Merriweather", serif;
+}
+
+/* Paragraphs */
 p {
-    font-family: "IBM Plex Mono";
-    font-weight: 400;
-    font-style: normal;
-    color: #EEEEEE;
-    padding-bottom: 10px;
+  margin: 1em 0;
+  font-family: "Merriweather", serif;
+  font-weight: 500;
+    font-size: 1.15em;
 }
 
+/* Links */
 a {
-    font-family: "IBM Plex Mono";
-    font-weight: 400;
-    font-style: normal;
-    color: #EEEEEE;
-    padding-bottom: 10px;
-    text-decoration: underline;
-    text-decoration-style: dashed;
-    text-underline-offset: 10px;
-    cursor: pointer;
+  text-decoration: none;
 }
 
-a:hover {
-    color: #76ABAE;
+a:hover,
+a:focus {
+  text-decoration: none;
 }
 
-li {
-    font-family: "IBM Plex Mono";
-    font-weight: 400;
-    font-style: normal;
-    color: #EEEEEE;
-    padding-bottom: 10px;
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-li::marker {
-    color: #76ABAE;
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  background-color: #fff;
 }
 
-/* Header */
-.header {
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.75em;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+/* Responsive text sizing */
+@media (max-width: 600px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.25rem; }
+  h5 { font-size: 1.1rem; }
+}
+
+.title {
+    font-family: "Merriweather", serif;
+    font-weight: 800;
+    color: #222831;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.navBar h4 {
+  margin: 0;
+  vertical-align: middle;
+}
+
+.navBar h5 {
+  margin: 0;
+  vertical-align: middle;
+}
+
+.navRight h4 {
+  display: inline-block;
+  margin: 0 0 0 1em;
+}
+
+.navRight h5 {
+  display: inline-block;
+  margin: 0 0 0 1em;
+  align-items: center;
+}
+
+.navBar h4,
+.navRight {
+  float: none;
+}
+
+.navLink {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    color: #222831;
+  vertical-align: middle;
+}
+
+.navLink::before {
+    content: attr(data-text);
+    font-weight: 800;
+    visibility: hidden;
+    height: 0;
     overflow: hidden;
-    padding-top: 20px;
-}
-
-.header-title {
-    font-weight: 600;
-}
-
-.header h2 {
-    float: left;
-    text-align: center;
-    text-decoration: none;
-}
-
-.header-right {
-    float: right;
-}
-
-.header h3 {
-    float: left;
-    text-align: center;
-    text-decoration: none;
-}
-
-.header-selected {
-    padding-left: 20px;
-    text-decoration: none;
-    font-weight: 900;
-}
-
-.header-elements {
-    padding-left: 20px;
-    text-decoration: none;
-    font-weight: 400;
-}
-
-.header a {
-    float: left;
-    text-align: center;
-    text-decoration: none;
-    line-height: 25px;
-}
-
-.header a:hover {
-    float: left;
-    text-align: center;
-    text-decoration: none;
-    line-height: 25px;
-}
-
-/* Social Media Sharesheet */
-.social-media-sharesheet {
-    display: flex;
-    gap: 10px;
-}
-
-.social-icon {
-    width: 34px;
-    height: 24px;
     display: block;
-    background-size: cover;
-    background-position: center;
 }
 
-.social-icon.email {
-    background-image: url('assets/social/email.svg');
-    width: 34px;
-    height: 24px;
+.navLink:hover {
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
 }
 
-.social-icon.email:hover {
-    background-image: url('assets/social/email_hover.svg');
-    width: 34px;
-    height: 24px;
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }
 
-.social-icon.linkedin {
-    background-image: url('assets/social/linkedin.svg');
-    width: 34px;
-    height: 24px;
+.material-symbols-outlined:hover {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }
 
-.social-icon.linkedin:hover {
-    background-image: url('assets/social/linkedin_hover.svg');
-    width: 34px;
-    height: 24px;
+.material-symbols-outlined {
+  vertical-align: middle;
+  cursor: pointer;
 }
 
-.social-icon.instagram {
-    background-image: url('assets/social/instagram.svg');
-    width: 34px;
-    height: 24px;
+.icon-toggle {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  vertical-align: middle; /* Align with nav text */
+  margin-left: 1em; /* Optional spacing */
 }
 
-.social-icon.instagram:hover {
-    background-image: url('assets/social/instagram_hover.svg');
-    width: 34px;
-    height: 24px;
+.icon-toggle .material-symbols-outlined {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+      vertical-align: middle; /* Align with nav text */
+  line-height: 1;
+  user-select: none;
+  pointer-events: none; /* Let parent handle click */
 }
 
-.social-icon.youtube {
-    background-image: url('assets/social/youtube.svg');
-    width: 34px;
-    height: 24px;
+.icon-toggle .icon-outline {
+  opacity: 1;
+  font-variation-settings: 'FILL' 0;
+  vertical-align: middle; /* Align with nav text */
+
 }
 
-.social-icon.youtube:hover {
-    background-image: url('assets/social/youtube_hover.svg');
-    width: 34px;
-    height: 24px;
+.icon-toggle .icon-filled {
+  vertical-align: middle; /* Align with nav text */
+
+  opacity: 0;
+  font-variation-settings: 'FILL' 1;
 }
 
+.icon-toggle.active .icon-outline {
+      vertical-align: middle; /* Align with nav text */
+  opacity: 0;
+}
+
+.icon-toggle.active .icon-filled {
+  opacity: 1;
+}
+
+.gradient-underline {
+  position: relative;
+  display: inline-block;
+  font-size: 4em;
+}
+
+.gradient-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom:-0.2em;
+  height: 0.12em; /* underline thickness */
+  width: 100%;
+  background: linear-gradient(to right, #649194, #87C3C7);
+}
+
+.material-symbols-outlined {
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.h1-underline {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #222831;
+}
+
+.h1-underline > a {
+  color: #222831;
+}
+.h1-underline > a:hover {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #87C3C7;
+  content: '';
+}
+
+.h1-underline:visited {
+  color: #222831;
+}
+.h1-underline:hover::after {
+  position: absolute;
+  left: 0;
+  bottom:-0.25em;
+  height: 0.17em; /* underline thickness */
+  width: 100%;
+  color: #87C3C7;
+
+}
+
+.h1-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom:-0.25em;
+  height: 0.17em; /* underline thickness */
+  width: 100%;
+  background: linear-gradient(to right, #649194, #87C3C7);
+}
 
 /* Video */
 .video-wrapper {
@@ -220,130 +342,148 @@ li::marker {
 }
 
 .video-div {
-    padding-bottom: 20px;
+    padding-top: 0.5em;
+    max-width: 1000px;
+    padding-bottom: 0.5em;
+
 }
 
-/* 404 Page */
-a.p-link {
-    font-family: "IBM Plex Mono";
+.scaArchives h4, p {
+  margin: 0;
+  padding-top: 1em;
+}
+.scaArchives p {
+  margin: 0;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
+
+.smalltext {
+    font-size: 0.8em;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: #222831;
+}
+
+.footText {
+    padding-top: 0em;
+    font-size: 0.8em;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    text-align: center
+}
+
+.gradient-hr {
+  border: none;
+  height: 4px; /* Thickness of the line */
+  background: linear-gradient(to right, #649194, #87C3C7);
+  margin: 2em 0; /* Optional: spacing */
+}
+.resume h4, p {
+  margin: 0;
+  padding-top: 1em;
+}
+.resume li {
+    margin: 0;
+    padding: 0;
+}
+.resume p {
+  margin: 0;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
+.resumePlace {
+  font-family: 'Merriweather', serif;
+  font-style: oblique 20deg;
+  font-weight: 700; /* or 700 if you want bold italic */
+}
+
+.resumeTitle {
+    font-size: 0.8em;
+    font-family: "Merriweather", serif;
+    font-weight: 600;
+}
+
+.resumeLink {
+  display: inline-block;
+  position: relative;
+  text-decoration: underline;
+}
+
+.cloneResumeLink {
+  font-weight: 800;
+  visibility: hidden;
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.actualResumeLink {
+  display: inline;
+  font-weight: normal;
+  transition: font-weight 0.2s;
+}
+
+.resumeLink:hover .actualResumeLink {
+  font-weight: bold;
+}
+
+.resumeLink:hover {
+  text-decoration: underline;
+  color: #76ABAE;
+  font-weight: 800;
+}
+
+li {
+    font-family: "Merriweather", serif;
     font-weight: 600;
     font-style: normal;
-    color: #EEEEEE;
     padding-bottom: 10px;
-    text-decoration: underline;
-    text-decoration-style: dashed;
-    text-underline-offset: 5px;
 }
 
-a.p-link:hover {
-    font-family: "IBM Plex Mono";
-    font-weight: 600;
-    font-style: normal;
-    color: #76ABAE;
-    padding-bottom: 10px;
-    text-decoration: underline;
-    text-decoration-style: dashed;
-    text-underline-offset: 5px;
-    cursor: pointer;
-}
-
-/* Other */
-h2.job-title {
-    font-weight: 400;
-}
-
-a.job-title {
-    font-weight: 800;
-}
-
-a.exp-dates {
-    font-weight: 400;
-    text-decoration: none;
-    color: #76ABAE;
-    cursor: auto;
-}
-
-a.project-link {
-    font-weight: 400;
+li::marker {
     color: #76ABAE;
 }
-
-a.no-decoration {
-    text-decoration: none;
+.social-bar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
 }
 
-a.no-decoration:hover {
-    text-decoration: none;
+.social-barL {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding-top: 0.5em;
 }
 
-a.italics {
-    font-weight: 500;
-    font-style: italic;
-    padding-bottom: 10px;
-    text-decoration: underline;
-    text-decoration-style: dashed;
-    text-underline-offset: 10px;
+.social-icon {
+  background-color: #76ABAE; /* Blue background */
+  color: #eeeeee; /* Icon color */
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-a.italics:hover {
-    font-family: "IBM Plex Mono";
-    font-weight: 500;
-    font-style: italic;
-    color: #76ABAE;
-    padding-bottom: 10px;
-   text-decoration: underline;
-    text-decoration-style: dashed;
-    text-underline-offset: 10px;
-    cursor: pointer;
+body.dark-mode .social-icon {
+  background-color: #31363F;
+  color: #eeeeee;
 }
 
-/* Mobile Media Screen */
-@media screen and (max-width: 767px){
-    
-    /* Website Layout */
-    body {
-        margin-left: 20px;
-        margin-right: 20px;        
-    }
-    
-    /* Main Classes */
-    h1 {
-        font-size: 2em !important;
-    }
+body.dark-mode .social-icon:hover {
+  background-color: #76ABAE;
+  color: #eeeeee;
+}
 
-    h2 {
-        font-size: 1.5em !important;
-    }
-    
-    h3 {
-        font-size: 1.2em !important;
-    }
-
-    p {
-        font-size: 1.2em !important;
-    }
-
-    /* Header */
-    .header h2 {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-    
-    .header h3 {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-    
-    .header a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-     
-    .header-right {
-        float: none;
-    }
-    
+.social-icon:hover {
+  background-color: #222831;
+  transform: scale(1.1);
 }
