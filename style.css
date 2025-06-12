@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap");
 body.dark-mode {
   background-color: #222831;
   color: #eeeeee;
@@ -9,22 +9,22 @@ body.dark-mode a {
 }
 
 body.dark-mode .smalltext {
-  color: #76ABAE;
+  color: #76abae;
 }
 
 body.dark-mode .resumeTitle {
-  color: #76ABAE;
+  color: #76abae;
 }
 
 body.dark-mode a.material-symbols-outlined {
-  color: #F3E891;
+  color: #f3e891;
 }
-
-
 
 /* You can also add transitions for smooth effect */
 body {
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 /* Base styles */
@@ -33,48 +33,53 @@ body {
   padding: 2em;
   line-height: 1.6;
   font-size: 16px;
-    color: #222831;
+  color: #222831;
   background-color: #ffffff;
 }
 
 .mainContent {
-    max-width: 767px;
-    margin: auto;
-    min-height: 100vh;}
+  max-width: 767px;
+  margin: auto;
+  min-height: 100vh;
+}
 
 /* Headings */
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin: 1.5em 0 0.5em;
   font-weight: 600;
   line-height: 1.2;
 }
 
-h1 { 
-    font-size: 2.5rem;
-    font-weight: 800;
-    font-family: "Inter", sans-serif;
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-family: "Inter", sans-serif;
 }
 
-h2 { 
+h2 {
   font-size: 2rem;
 }
 
 h3 {
   font-size: 1.75rem;
-    font-weight: 800;
-    font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-family: "Inter", sans-serif;
 }
 
 h4 {
   font-size: 1.5rem;
-    font-weight: 800;
-    font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-family: "Inter", sans-serif;
 }
 
 h5 {
-    font-size: 1.25rem;
-    font-weight: 500;
-    font-family: "Merriweather", serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-family: "Merriweather", serif;
 }
 
 /* Paragraphs */
@@ -82,7 +87,7 @@ p {
   margin: 1em 0;
   font-family: "Merriweather", serif;
   font-weight: 500;
-    font-size: 1.15em;
+  font-size: 1.15em;
 }
 
 /* Links */
@@ -110,7 +115,8 @@ table {
   background-color: #fff;
 }
 
-th, td {
+th,
+td {
   border: 1px solid #ddd;
   padding: 0.75em;
   text-align: left;
@@ -123,17 +129,27 @@ th {
 
 /* Responsive text sizing */
 @media (max-width: 600px) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.75rem; }
-  h3 { font-size: 1.5rem; }
-  h4 { font-size: 1.25rem; }
-  h5 { font-size: 1.1rem; }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
+  h5 {
+    font-size: 1.1rem;
+  }
 }
 
 .title {
-    font-family: "Merriweather", serif;
-    font-weight: 800;
-    color: #222831;
+  font-family: "Merriweather", serif;
+  font-weight: 800;
+  color: #222831;
 }
 
 .navBar {
@@ -170,40 +186,40 @@ th {
 }
 
 .navLink {
-    font-family: "Inter", sans-serif;
-    font-weight: 500;
-    color: #222831;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: #222831;
   vertical-align: middle;
 }
 
 .navLink::before {
-    content: attr(data-text);
-    font-weight: 800;
-    visibility: hidden;
-    height: 0;
-    overflow: hidden;
-    display: block;
+  content: attr(data-text);
+  font-weight: 800;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  display: block;
 }
 
 .navLink:hover {
-    font-family: "Inter", sans-serif;
-    font-weight: 800;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
 }
 
 .material-symbols-outlined {
   font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
 }
 
 .material-symbols-outlined:hover {
   font-variation-settings:
-  'FILL' 1,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+    "FILL" 1,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
 }
 
 .material-symbols-outlined {
@@ -234,7 +250,7 @@ th {
   align-items: center;
   justify-content: center;
   transition: opacity 0.3s ease;
-      vertical-align: middle; /* Align with nav text */
+  vertical-align: middle; /* Align with nav text */
   line-height: 1;
   user-select: none;
   pointer-events: none; /* Let parent handle click */
@@ -242,20 +258,19 @@ th {
 
 .icon-toggle .icon-outline {
   opacity: 1;
-  font-variation-settings: 'FILL' 0;
+  font-variation-settings: "FILL" 0;
   vertical-align: middle; /* Align with nav text */
-
 }
 
 .icon-toggle .icon-filled {
   vertical-align: middle; /* Align with nav text */
 
   opacity: 0;
-  font-variation-settings: 'FILL' 1;
+  font-variation-settings: "FILL" 1;
 }
 
 .icon-toggle.active .icon-outline {
-      vertical-align: middle; /* Align with nav text */
+  vertical-align: middle; /* Align with nav text */
   opacity: 0;
 }
 
@@ -270,13 +285,13 @@ th {
 }
 
 .gradient-underline::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
-  bottom:-0.2em;
+  bottom: -0.2em;
   height: 0.12em; /* underline thickness */
   width: 100%;
-  background: linear-gradient(to right, #649194, #87C3C7);
+  background: linear-gradient(to right, #649194, #87c3c7);
 }
 
 .material-symbols-outlined {
@@ -298,8 +313,8 @@ th {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  color: #87C3C7;
-  content: '';
+  color: #87c3c7;
+  content: "";
 }
 
 .h1-underline:visited {
@@ -308,47 +323,46 @@ th {
 .h1-underline:hover::after {
   position: absolute;
   left: 0;
-  bottom:-0.25em;
+  bottom: -0.25em;
   height: 0.17em; /* underline thickness */
   width: 100%;
-  color: #87C3C7;
-
+  color: #87c3c7;
 }
 
 .h1-underline::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
-  bottom:-0.25em;
+  bottom: -0.25em;
   height: 0.17em; /* underline thickness */
   width: 100%;
-  background: linear-gradient(to right, #649194, #87C3C7);
+  background: linear-gradient(to right, #649194, #87c3c7);
 }
 
 /* Video */
 .video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
-    overflow: hidden;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
 }
 
 .video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .video-div {
-    padding-top: 0.5em;
-    max-width: 1000px;
-    padding-bottom: 0.5em;
-
+  padding-top: 0.5em;
+  max-width: 1000px;
+  padding-bottom: 0.5em;
 }
 
-.scaArchives h4, p {
+.scaArchives h4,
+p {
   margin: 0;
   padding-top: 1em;
 }
@@ -359,34 +373,35 @@ th {
 }
 
 .smalltext {
-    font-size: 0.8em;
-    font-family: "Inter", sans-serif;
-    font-weight: 600;
-    text-decoration: underline;
-    text-decoration-color: #222831;
+  font-size: 0.8em;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: #222831;
 }
 
 .footText {
-    padding-top: 0em;
-    font-size: 0.8em;
-    font-family: "Inter", sans-serif;
-    font-weight: 600;
-    text-align: center
+  padding-top: 0em;
+  font-size: 0.8em;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  text-align: center;
 }
 
 .gradient-hr {
   border: none;
   height: 4px; /* Thickness of the line */
-  background: linear-gradient(to right, #649194, #87C3C7);
+  background: linear-gradient(to right, #649194, #87c3c7);
   margin: 2em 0; /* Optional: spacing */
 }
-.resume h4, p {
+.resume h4,
+p {
   margin: 0;
   padding-top: 1em;
 }
 .resume li {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 .resume p {
   margin: 0;
@@ -394,15 +409,15 @@ th {
   padding-bottom: 0.3em;
 }
 .resumePlace {
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   font-style: oblique 20deg;
   font-weight: 700; /* or 700 if you want bold italic */
 }
 
 .resumeTitle {
-    font-size: 0.8em;
-    font-family: "Merriweather", serif;
-    font-weight: 600;
+  font-size: 0.8em;
+  font-family: "Merriweather", serif;
+  font-weight: 600;
 }
 
 .resumeLink {
@@ -431,19 +446,19 @@ th {
 
 .resumeLink:hover {
   text-decoration: underline;
-  color: #76ABAE;
+  color: #76abae;
   font-weight: 800;
 }
 
 li {
-    font-family: "Merriweather", serif;
-    font-weight: 600;
-    font-style: normal;
-    padding-bottom: 10px;
+  font-family: "Merriweather", serif;
+  font-weight: 600;
+  font-style: normal;
+  padding-bottom: 10px;
 }
 
 li::marker {
-    color: #76ABAE;
+  color: #76abae;
 }
 .social-bar {
   display: flex;
@@ -460,7 +475,7 @@ li::marker {
 }
 
 .social-icon {
-  background-color: #76ABAE; /* Blue background */
+  background-color: #76abae; /* Blue background */
   color: #eeeeee; /* Icon color */
   width: 48px;
   height: 48px;
@@ -470,16 +485,18 @@ li::marker {
   border-radius: 50%;
   font-size: 20px;
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 }
 
 body.dark-mode .social-icon {
-  background-color: #31363F;
+  background-color: #31363f;
   color: #eeeeee;
 }
 
 body.dark-mode .social-icon:hover {
-  background-color: #76ABAE;
+  background-color: #76abae;
   color: #eeeeee;
 }
 
