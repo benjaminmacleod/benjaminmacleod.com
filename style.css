@@ -12,6 +12,15 @@ body.dark-mode .smalltext {
   color: #76abae;
 }
 
+a.smalltext {
+  text-decoration: none;
+  color: #76abae;
+}
+
+a.resumeLink {
+  color: #222831;
+}
+
 body.dark-mode .resumeTitle {
   color: #76abae;
 }
