@@ -21,7 +21,7 @@ a.smalltext {
   color: #76abae;
 }
 
-a.smalltext:hover {
+.smalltext:hover {
   text-decoration: none;
   color: #222831;
 }
