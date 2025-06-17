@@ -21,3 +21,9 @@ User-agent: *
 Disallow: /404/
 Disallow: notebook.benjaminmacleod.com/
 Disallow: dashboard.benjaminmacleod.com/
+Disallow: newtab.benjaminmacleod.com/
+Disallow: beta.benjaminmacleod.com/
+Disallow: old.benjaminmacleod.com/
+Disallow: /images/
+Disallow: /assets/
+Disallow: /travels.html/
