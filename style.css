@@ -12,9 +12,18 @@ body.dark-mode .smalltext {
   color: #76abae;
 }
 
+body.dark-mode .smalltext:hover {
+  color: #eeeeee;
+}
+
 a.smalltext {
   text-decoration: none;
   color: #76abae;
+}
+
+a.smalltext:hover {
+  text-decoration: none;
+  color: #222831;
 }
 
 a.resumeLink {
