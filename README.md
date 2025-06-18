@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/dc9c5f6a-c73a-4741-ad17-17467f0928b5/deploy-status)](https://app.netlify.com/projects/benjaminmacleod/deploys)
+
 # www.benjaminmacleod.com
 ## Benjamin MacLeod's Personal Website
 
