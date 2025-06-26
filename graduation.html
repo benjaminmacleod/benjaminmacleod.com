@@ -1,60 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!--Meta - Title-->
-<title>SCA Grad 2025</title>
-    
-<!--Meta - Favicon-->
-<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-<link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
-<link rel="shortcut icon" href="/assets/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
-<meta name="apple-mobile-web-app-title" content="BM" />
-<link rel="manifest" href="/assets/site.webmanifest" />
+  <title>SCA Grad 2025</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+  <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+  <link rel="manifest" href="/assets/site.webmanifest" />
 
-<!--Meta - Style-->
-<link rel="stylesheet" type="text/css" href="/style.css">
+  <style>
+    body {
+      margin: 0;
+      background-color: #1F2B3C;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      font-family: Rubik, sans-serif;
+    }
 
-<!--Meta - Redirect-->
-<meta http-equiv="refresh" content="0; url=https://www.youtube.com/live/DwWwPSKAGBQ?si=Mz_Zj0mVWrj6lluM">
+    #loading-text {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+      h2{
+          font-family: Rubik;
+        color: #ffffff;
 
-<style></style>
+      }
+    #loader {
+      width: 80px;
+      height: 80px;
+      border: 12px solid #BCC9DC;
+      border-top: 12px solid #5777A8;
+      border-radius: 50%;
+      animation: spin 1.2s linear infinite;
+    }
 
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+      
+      #not-loading{
+          margin-top: 2em;
+          padding-left:3em;
+        padding-right: 3em;
+          background-color: #5777A8;
+          border-radius: 0.5em;
+          color: #ffffff;
+          cursor: pointer;
+      }
+      #not-loading:hover{
+          margin-top: 2em;
+          padding-left:3em;
+        padding-right: 3em;
+          background-color: #30425C;
+          border-radius: 0.5em;
+          color: #ffffff;
+          cursor: pointer;
+      }
+      a{
+          text-decoration: none;
+          display: block;
+          color: #ffffff;
+          font-weight: 500;
+      }
+  </style>
 </head>
-
 <body>
-<div class="content">
 
-<!--Section - Header-->
-<div class="header">
-    <h2><a class="header-title" href="https://benjaminmacleod.com">Benjamin MacLeod</a></h2>
-<div class="header-right">
-    <h3><a class="header-elements" href="https://benjaminmacleod.com">Home</a></h3>
-    <h3><a class="header-elements" href="https://benjaminmacleod.com/projects">Projects</a></h3>
-    <h3><a class="header-elements" href="https://benjaminmacleod.com/about">About</a></h3>
-</div>
-</div>
+  <div id="loading-text"><h2>Loading...</h2></div>
+  <div id="loader"></div>
+    <a id="not-loading" href="https://www.youtube.com/live/DwWwPSKAGBQ"><h3>Not loading?</h3></a>
 
-<hr class="primary">
+  <script>
+    setTimeout(() => {
+      window.location.href = "https://www.youtube.com/live/DwWwPSKAGBQ?si=Mz_Zj0mVWrj6lluM";
+    }, 3000);
+  </script>
 
-<!--Section - Redirect-->
-<h1>You are being redirected...</h1>
-<p>If you are not redirected, <a class="pLink" href="https://www.youtube.com/live/DwWwPSKAGBQ?si=Mz_Zj0mVWrj6lluM">click here</a>.</p>
-
-<br>
-<br>
-
-<hr class="primary">
-
-<!--Section - Footer-->
-<p><small>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Benjamin MacLeod All Rights Reserved</small></p>
-
-<br>
-    
-</div>
 </body>
 </html>
