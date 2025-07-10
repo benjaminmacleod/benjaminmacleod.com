@@ -48,7 +48,7 @@ body {
 /* Base styles */
 body {
   margin: 0;
-  padding: 2em;
+  padding: 0;
   line-height: 1.6;
   font-size: 16px;
   color: #222831;
@@ -59,6 +59,7 @@ body {
   max-width: 767px;
   margin: auto;
   min-height: 100vh;
+  padding: 2em;
 }
 
 /* Headings */
@@ -171,11 +172,38 @@ th {
 }
 
 .navBar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
+  background-color: #ffffff80;
+  background-image: linear-gradient(#ffffffcc, #ffffff80, #ffffff00);
+  padding: 1.5em;
+  backdrop-filter: blur(10px);
   align-items: center;
-  overflow: hidden;
 }
+
+.navBar-fade {
+  position: sticky;
+  top: calc(4em); /* matches .navBar height if padding is 2em top/bottom */
+  height: 1.001em;
+  background: linear-gradient(to bottom, #ffffff80 0%, transparent 100%);
+  backdrop-filter: blur(20px);
+    filter: brightness(150%);
+  z-index: 9;
+  pointer-events: none;
+}
+
+.dark-mode .navBar {
+  background-color: #22283180;
+  background-image: linear-gradient(#222831cc, #22283180, #22283100);
+}
+
+.dark-mode .navBar-fade {
+  background: linear-gradient(to bottom, #22283180 0%, transparent 100%);
+}
+
 
 .navBar h4 {
   margin: 0;
