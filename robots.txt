@@ -20,6 +20,7 @@ User-agent: *
 
 Disallow: /404/
 Disallow: notebook.benjaminmacleod.com/
+Disallow: newsletter.benjaminmacleod.com/
 Disallow: dashboard.benjaminmacleod.com/
 Disallow: newtab.benjaminmacleod.com/
 Disallow: beta.benjaminmacleod.com/
