@@ -44,14 +44,17 @@ body.dark-mode .resumeTitle {
 body.dark-mode a.material-symbols-outlined {
   color: #f3e891;
 }
-body.dark-mode a.material-symbols-outlined {
-      text-shadow: 0 0 20px #f3e89177;
+
+.icon-toggle .material-symbols-outlined {
+    transition: filter 0.3s ease, text-shadow 0.3s ease;
 }
 
-
-.material-symbols-outlined:hover {
-      text-shadow: 0 0 20px #f3e89177;
+.icon-toggle:hover .material-symbols-outlined {
+    filter: drop-shadow(0 0 20px #f3e891aa);
+    text-shadow: 0 0 20px #f3e891aa; /* Optional enhancement */
+      transition: filter 0.3s ease, text-shadow 0.3s ease;
 }
+
 /* You can also add transitions for smooth effect */
 body {
   transition:
@@ -283,9 +286,6 @@ text-shadow: 0 0 20px #eeeeee77;
 
 }
 
-h5 > #darkModeToggle > .icon-toggle {
-  text-shadow: 0 0 20px #eeeeee77;
-}
 
 .material-symbols-outlined {
   font-variation-settings:
@@ -301,6 +301,8 @@ h5 > #darkModeToggle > .icon-toggle {
     "wght" 400,
     "GRAD" 0,
     "opsz" 24;
+  text-shadow: 0 0 20px #eeeeee77;
+
 }
 
 .material-symbols-outlined {
