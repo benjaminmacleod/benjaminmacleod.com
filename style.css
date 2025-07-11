@@ -8,6 +8,10 @@ body.dark-mode a {
   color: #eeeeee;
 }
 
+body.dark-mode h4.title a {
+    color: #eeeeee;
+}
+
 body.dark-mode .smalltext {
   color: #76abae;
 }
@@ -19,15 +23,18 @@ body.dark-mode .smalltext:hover {
 a.smalltext {
   text-decoration: none;
   color: #76abae;
+transition: ease-in, 0.3s;
 }
 
 .smalltext:hover {
   text-decoration: none;
   color: #222831;
+  transition: ease-in, 0.3s;
 }
 
 a.resumeLink {
   color: #222831;
+  transition: ease-in, 0.3s;
 }
 
 body.dark-mode .resumeTitle {
@@ -38,6 +45,9 @@ body.dark-mode a.material-symbols-outlined {
   color: #f3e891;
 }
 
+.material-symbols-outlined:hover {
+      text-shadow: 0 0 20px #f3e89177;
+}
 /* You can also add transitions for smooth effect */
 body {
   transition:
@@ -58,6 +68,7 @@ body {
 .mainContent {
   max-width: 767px;
   margin: auto;
+  margin-top: -5em;
   min-height: 100vh;
   padding: 2em;
 }
@@ -169,8 +180,18 @@ th {
   font-family: "Merriweather", serif;
   font-weight: 800;
   color: #222831;
+  transition: ease-in, 0.3s;
 }
 
+body.dark-mode .title:hover {
+text-shadow: 0 0 20px #eeeeee77;
+  color: #222831;
+    transition: ease-in, 0.3s;
+}
+
+h4.title a {
+    color: #222831;
+}
 .navBar {
   position: sticky;
   top: 0;
@@ -178,32 +199,33 @@ th {
   display: flex;
   justify-content: space-between;
   background-color: #ffffff80;
-  background-image: linear-gradient(#ffffffcc, #ffffff80, #ffffff00);
+  background-image: linear-gradient(to bottom, #ffffffff, #ffffff00);
   padding: 1.5em;
+  padding-bottom: 4em;
   backdrop-filter: blur(10px);
   align-items: center;
-}
-
-.navBar-fade {
-  position: sticky;
-  top: calc(4em); /* matches .navBar height if padding is 2em top/bottom */
-  height: 1.001em;
-  background: linear-gradient(to bottom, #ffffff80 0%, transparent 100%);
-  backdrop-filter: blur(20px);
-    filter: brightness(150%);
-  z-index: 9;
-  pointer-events: none;
+  mask-image: -webkit-gradient(linear, left top, left bottom, 
+    color-stop(0, rgba(0,0,0,1)),
+  color-stop(0.2, rgba(0,0,0,1)),
+      color-stop(0.5, rgba(0,0,0,1)),
+        color-stop(0.8, rgba(0,0,0,0.8)),
+  color-stop(1, rgba(0,0,0,0))
+);
+  
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, 
+    color-stop(0, rgba(0,0,0,1)),
+  color-stop(0.2, rgba(0,0,0,1)),
+      color-stop(0.5, rgba(0,0,0,1)),
+    color-stop(0.8, rgba(0,0,0,0.8)),
+  color-stop(1, rgba(0,0,0,0))
+);
 }
 
 .dark-mode .navBar {
   background-color: #22283180;
-  background-image: linear-gradient(#222831cc, #22283180, #22283100);
-}
+  background-image: linear-gradient(to bottom, #222831ff, #22283100);
 
-.dark-mode .navBar-fade {
-  background: linear-gradient(to bottom, #22283180 0%, transparent 100%);
 }
-
 
 .navBar h4 {
   margin: 0;
@@ -236,6 +258,8 @@ th {
   font-weight: 500;
   color: #222831;
   vertical-align: middle;
+    transition: ease-in, 0.3s;
+
 }
 
 .navLink::before {
@@ -250,6 +274,9 @@ th {
 .navLink:hover {
   font-family: "Inter", sans-serif;
   font-weight: 800;
+text-shadow: 0 0 20px #eeeeee77;
+    transition: ease-in, 0.3s;
+
 }
 
 .material-symbols-outlined {
@@ -350,10 +377,13 @@ th {
   display: inline-block;
   cursor: pointer;
   color: #222831;
+      transition: ease-in, 0.3s;
 }
 
 .h1-underline > a {
   color: #222831;
+      transition: ease-in, 0.3s;
+
 }
 .h1-underline > a:hover {
   position: relative;
@@ -361,6 +391,7 @@ th {
   cursor: pointer;
   color: #87c3c7;
   content: "";
+    transition: ease-in, 0.3s;
 }
 
 .h1-underline:visited {
@@ -373,6 +404,8 @@ th {
   height: 0.17em; /* underline thickness */
   width: 100%;
   color: #87c3c7;
+    transition: ease-in, 0.3s;
+  
 }
 
 .h1-underline::after {
@@ -424,10 +457,11 @@ p {
   font-weight: 600;
   text-decoration: underline;
   text-decoration-color: #222831;
+  transition: ease-in, 0.3s;
 }
 
 .footText {
-  padding-top: 0em;
+  padding-top: 0;
   font-size: 0.8em;
   font-family: "Inter", sans-serif;
   font-weight: 600;
@@ -470,6 +504,7 @@ p {
   display: inline-block;
   position: relative;
   text-decoration: underline;
+  transition: ease-in, 0.3s;
 }
 
 .cloneResumeLink {
@@ -494,6 +529,7 @@ p {
   text-decoration: underline;
   color: #76abae;
   font-weight: 800;
+  transition: ease-in, 0.3s;
 }
 
 li {
