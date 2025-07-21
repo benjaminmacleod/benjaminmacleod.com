@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
         <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dark_mode" />
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dark_mode,menu" />
 
         <!--Meta - Facebook-->
         <meta property="og:type" content="website" />
@@ -35,6 +35,14 @@
         <style></style>
     </head>
     <body>
+<div id="fullScreenMenu" class="full-screen-menu">
+        <button id="closeMenu" class="close-btn">×</button>
+        <nav>
+            <a class="mobileMenuButton" data-text="Home" href="/index.html">Home</a>
+            <a class="mobileMenuButton" data-text="Projects" href="/projects.html">Projects</a>
+            <a class="mobileMenuButton" data-text="About" href="/about.html">About</a>
+        </nav>
+    </div>
         <div class="navBar">
             <h4 class="title"><a href="/index.html">Benjamin MacLeod</a></h4>
             <div class="navRight">
@@ -50,12 +58,48 @@
         <div class="MOBILEnavBar">
             <h4 class="title"><a href="/index.html">Benjamin MacLeod</a></h4>
             <div class="navRight">
+                    <h5 class="icon-toggle menu-toggle" id="menuToggle">
+                    <span class="material-symbols-outlined icon-outline">menu</span>
+                    <span class="material-symbols-outlined icon-filled">menu</span>
+                </h5>
                 <h5 class="icon-toggle" id="mobiledarktoggle">
                     <a class="material-symbols-outlined icon-outline">dark_mode</a>
                     <a class="material-symbols-outlined icon-filled">dark_mode</a>
                 </h5>
+
             </div>
+            
         </div>
+    
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menuToggle");
+    const fullScreenMenu = document.getElementById("fullScreenMenu");
+    const closeMenu = document.getElementById("closeMenu");
+
+    if (!menuToggle || !fullScreenMenu || !closeMenu) {
+        console.warn("Missing toggle, menu, or close button element.");
+        return;
+    }
+
+    // Open the menu
+    menuToggle.addEventListener("click", () => {
+        fullScreenMenu.classList.add("active");
+    });
+
+    // Close the menu with button
+    closeMenu.addEventListener("click", () => {
+        fullScreenMenu.classList.remove("active");
+    });
+
+    // Close the menu with ESC key
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            fullScreenMenu.classList.remove("active");
+        }
+    });
+});
+</script>
 <script>
 window.addEventListener("DOMContentLoaded", () => {
     const desktopToggle = document.getElementById("darkModeToggle");
