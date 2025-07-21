@@ -360,6 +360,17 @@ text-shadow: 0 0 20px #eeeeee77;
 .icon-toggle.active .icon-filled {
   opacity: 1;
 }
+.icon-filled {
+    display: none;
+}
+
+.icon-toggle.active .icon-filled {
+    display: inline;
+}
+
+.icon-toggle.active .icon-outline {
+    display: none;
+}
 
 .gradient-underline {
   position: relative;
@@ -596,3 +607,207 @@ body.dark-mode .social-icon:hover {
   background-color: #222831;
   transform: scale(1.1);
 }
+
+.MOBILEnavBar {
+    display: none;
+  }
+
+.mobileMenuToggle {
+    display: none;
+}
+
+.full-screen-menu {
+    display: none; /* Default */
+}
+
+@media screen and (max-width:700px){
+  .mobileMenuToggle {
+        display: block;
+    }
+  
+  .navBar {
+    display: none;
+  }
+  
+  .full-screen-menu.active {
+        display: flex;
+    }
+  .full-screen-menu {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--menu-bg, rgba(0, 0, 0, 0.9));
+    color: white;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.full-screen-menu.active {
+    display: flex;
+}
+
+.full-screen-menu a {
+    font-size: 2rem;
+    margin: 1rem;
+    text-decoration: none;
+    color: inherit;
+}
+  
+  .MOBILEnavBar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff80;
+  background-image: linear-gradient(to bottom, #ffffffff, #ffffff00);
+  padding: 1.5em;
+  padding-bottom: 4em;
+  backdrop-filter: blur(10px);
+  align-items: center;
+  mask-image: -webkit-gradient(linear, left top, left bottom, 
+    color-stop(0, rgba(0,0,0,1)),
+  color-stop(0.2, rgba(0,0,0,1)),
+      color-stop(0.5, rgba(0,0,0,1)),
+        color-stop(0.8, rgba(0,0,0,0.8)),
+  color-stop(1, rgba(0,0,0,0))
+);
+  
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, 
+    color-stop(0, rgba(0,0,0,1)),
+  color-stop(0.2, rgba(0,0,0,1)),
+      color-stop(0.5, rgba(0,0,0,1)),
+    color-stop(0.8, rgba(0,0,0,0.8)),
+  color-stop(1, rgba(0,0,0,0))
+);
+}
+
+.dark-mode .MOBILEnavBar {
+  background-color: #22283180;
+  background-image: linear-gradient(to bottom, #222831ff, #22283100);
+
+}
+
+.MOBILEnavBar h4 {
+  margin: 0;
+  vertical-align: middle;
+}
+
+.navRight h4 {
+  display: inline-block;
+  margin: 0 0 0 1em;
+}
+
+.navRight h5 {
+  display: inline-block;
+  margin: 0 0 0 1em;
+  align-items: center;
+}
+
+.MOBILEnavBar h4,
+.navRight {
+  float: none;
+}
+
+.navLink {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: #222831;
+  vertical-align: middle;
+    transition: ease-in, 0.3s;
+
+}
+
+.navLink::before {
+  content: attr(data-text);
+  font-weight: 800;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  display: block;
+}
+
+.navLink:hover {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+text-shadow: 0 0 20px #eeeeee77;
+    transition: ease-in, 0.3s;
+
+}
+  
+.full-screen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 9999;
+}
+
+.full-screen-menu.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+.full-screen-menu a {
+    font-size: 2rem;
+    margin: 1rem;
+    color: inherit;
+    text-decoration: none;
+}
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.full-screen-menu nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+  .mobileMenuButton {
+    font-family: Inter;
+    font-weight: 500;
+        transition: ease-in, 0.3s;
+
+  }
+  
+    .mobileMenuButton:hover {
+    font-family: Inter;
+    font-weight: 800;
+        transition: ease-in, 0.3s;
+    text-shadow: 0 0 20px #eeeeee;
+  }
+  
+  .mobileMenuButton::before {
+  content: attr(data-text);
+  font-weight: 800;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  display: block;
+}
+}
+
