@@ -8,6 +8,10 @@ body.dark-mode a {
   color: #eeeeee;
 }
 
+body.dark-mode h4.title a {
+    color: #eeeeee;
+}
+
 body.dark-mode .smalltext {
   color: #76abae;
 }
@@ -19,15 +23,18 @@ body.dark-mode .smalltext:hover {
 a.smalltext {
   text-decoration: none;
   color: #76abae;
+transition: ease-in, 0.3s;
 }
 
 .smalltext:hover {
   text-decoration: none;
   color: #222831;
+  transition: ease-in, 0.3s;
 }
 
 a.resumeLink {
   color: #222831;
+  transition: ease-in, 0.3s;
 }
 
 body.dark-mode .resumeTitle {
@@ -36,6 +43,16 @@ body.dark-mode .resumeTitle {
 
 body.dark-mode a.material-symbols-outlined {
   color: #f3e891;
+}
+
+.icon-toggle .material-symbols-outlined {
+    transition: filter 0.3s ease, text-shadow 0.3s ease;
+}
+
+.icon-toggle:hover .material-symbols-outlined {
+    filter: drop-shadow(0 0 20px #f3e891aa);
+    text-shadow: 0 0 20px #f3e891aa; /* Optional enhancement */
+      transition: filter 0.3s ease, text-shadow 0.3s ease;
 }
 
 /* You can also add transitions for smooth effect */
@@ -48,7 +65,7 @@ body {
 /* Base styles */
 body {
   margin: 0;
-  padding: 2em;
+  padding: 0;
   line-height: 1.6;
   font-size: 16px;
   color: #222831;
@@ -58,7 +75,9 @@ body {
 .mainContent {
   max-width: 767px;
   margin: auto;
+  margin-top: -5em;
   min-height: 100vh;
+  padding: 2em;
 }
 
 /* Headings */
@@ -168,13 +187,51 @@ th {
   font-family: "Merriweather", serif;
   font-weight: 800;
   color: #222831;
+  transition: ease-in, 0.3s;
 }
 
+body.dark-mode .title:hover {
+text-shadow: 0 0 20px #eeeeee77;
+  color: #222831;
+    transition: ease-in, 0.3s;
+}
+
+h4.title a {
+    color: #222831;
+}
 .navBar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
+  background-color: #ffffff80;
+  background-image: linear-gradient(to bottom, #ffffffff, #ffffff00);
+  padding: 1.5em;
+  padding-bottom: 4em;
+  backdrop-filter: blur(10px);
   align-items: center;
-  overflow: hidden;
+  mask-image: -webkit-gradient(linear, left top, left bottom, 
+    color-stop(0, rgba(0,0,0,1)),
+  color-stop(0.2, rgba(0,0,0,1)),
+      color-stop(0.5, rgba(0,0,0,1)),
+        color-stop(0.8, rgba(0,0,0,0.8)),
+  color-stop(1, rgba(0,0,0,0))
+);
+  
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, 
+    color-stop(0, rgba(0,0,0,1)),
+  color-stop(0.2, rgba(0,0,0,1)),
+      color-stop(0.5, rgba(0,0,0,1)),
+    color-stop(0.8, rgba(0,0,0,0.8)),
+  color-stop(1, rgba(0,0,0,0))
+);
+}
+
+.dark-mode .navBar {
+  background-color: #22283180;
+  background-image: linear-gradient(to bottom, #222831ff, #22283100);
+
 }
 
 .navBar h4 {
@@ -208,6 +265,8 @@ th {
   font-weight: 500;
   color: #222831;
   vertical-align: middle;
+    transition: ease-in, 0.3s;
+
 }
 
 .navLink::before {
@@ -222,7 +281,11 @@ th {
 .navLink:hover {
   font-family: "Inter", sans-serif;
   font-weight: 800;
+text-shadow: 0 0 20px #eeeeee77;
+    transition: ease-in, 0.3s;
+
 }
+
 
 .material-symbols-outlined {
   font-variation-settings:
@@ -238,6 +301,8 @@ th {
     "wght" 400,
     "GRAD" 0,
     "opsz" 24;
+  text-shadow: 0 0 20px #eeeeee77;
+
 }
 
 .material-symbols-outlined {
@@ -295,6 +360,17 @@ th {
 .icon-toggle.active .icon-filled {
   opacity: 1;
 }
+.icon-filled {
+    display: none;
+}
+
+.icon-toggle.active .icon-filled {
+    display: inline;
+}
+
+.icon-toggle.active .icon-outline {
+    display: none;
+}
 
 .gradient-underline {
   position: relative;
@@ -322,10 +398,13 @@ th {
   display: inline-block;
   cursor: pointer;
   color: #222831;
+      transition: ease-in, 0.3s;
 }
 
 .h1-underline > a {
   color: #222831;
+      transition: ease-in, 0.3s;
+
 }
 .h1-underline > a:hover {
   position: relative;
@@ -333,6 +412,7 @@ th {
   cursor: pointer;
   color: #87c3c7;
   content: "";
+    transition: ease-in, 0.3s;
 }
 
 .h1-underline:visited {
@@ -345,6 +425,8 @@ th {
   height: 0.17em; /* underline thickness */
   width: 100%;
   color: #87c3c7;
+    transition: ease-in, 0.3s;
+  
 }
 
 .h1-underline::after {
@@ -396,10 +478,11 @@ p {
   font-weight: 600;
   text-decoration: underline;
   text-decoration-color: #222831;
+  transition: ease-in, 0.3s;
 }
 
 .footText {
-  padding-top: 0em;
+  padding-top: 0;
   font-size: 0.8em;
   font-family: "Inter", sans-serif;
   font-weight: 600;
@@ -442,6 +525,7 @@ p {
   display: inline-block;
   position: relative;
   text-decoration: underline;
+  transition: ease-in, 0.3s;
 }
 
 .cloneResumeLink {
@@ -466,6 +550,7 @@ p {
   text-decoration: underline;
   color: #76abae;
   font-weight: 800;
+  transition: ease-in, 0.3s;
 }
 
 li {
@@ -521,4 +606,96 @@ body.dark-mode .social-icon:hover {
 .social-icon:hover {
   background-color: #222831;
   transform: scale(1.1);
+}
+
+.MOBILEnavBar {
+    display: none;
+  }
+
+@media screen and (max-width:700px){
+  .navBar {
+    display: none;
+  }
+  
+  .MOBILEnavBar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff80;
+  background-image: linear-gradient(to bottom, #ffffffff, #ffffff00);
+  padding: 1.5em;
+  padding-bottom: 4em;
+  backdrop-filter: blur(10px);
+  align-items: center;
+  mask-image: -webkit-gradient(linear, left top, left bottom, 
+    color-stop(0, rgba(0,0,0,1)),
+  color-stop(0.2, rgba(0,0,0,1)),
+      color-stop(0.5, rgba(0,0,0,1)),
+        color-stop(0.8, rgba(0,0,0,0.8)),
+  color-stop(1, rgba(0,0,0,0))
+);
+  
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, 
+    color-stop(0, rgba(0,0,0,1)),
+  color-stop(0.2, rgba(0,0,0,1)),
+      color-stop(0.5, rgba(0,0,0,1)),
+    color-stop(0.8, rgba(0,0,0,0.8)),
+  color-stop(1, rgba(0,0,0,0))
+);
+}
+
+.dark-mode .MOBILEnavBar {
+  background-color: #22283180;
+  background-image: linear-gradient(to bottom, #222831ff, #22283100);
+
+}
+
+.MOBILEnavBar h4 {
+  margin: 0;
+  vertical-align: middle;
+}
+
+.navRight h4 {
+  display: inline-block;
+  margin: 0 0 0 1em;
+}
+
+.navRight h5 {
+  display: inline-block;
+  margin: 0 0 0 1em;
+  align-items: center;
+}
+
+.MOBILEnavBar h4,
+.navRight {
+  float: none;
+}
+
+.navLink {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: #222831;
+  vertical-align: middle;
+    transition: ease-in, 0.3s;
+
+}
+
+.navLink::before {
+  content: attr(data-text);
+  font-weight: 800;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  display: block;
+}
+
+.navLink:hover {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+text-shadow: 0 0 20px #eeeeee77;
+    transition: ease-in, 0.3s;
+
+}
 }
