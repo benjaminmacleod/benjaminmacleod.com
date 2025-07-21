@@ -36,7 +36,7 @@
     </head>
     <body>
         <div class="navBar">
-            <h4 class="title"><a>Benjamin MacLeod</a></h4>
+            <h4 class="title"><a href="/index.html">Benjamin MacLeod</a></h4>
             <div class="navRight">
                 <h5><a class="navLink" data-text="Home" href="/index.html">Home</a></h5>
                 <h5><a class="navLink" data-text="Projects" href="/projects.html">Projects</a></h5>
@@ -47,28 +47,54 @@
                 </h5>
             </div>
         </div>
-        <script>
-            const toggleBtn = document.getElementById("darkModeToggle");
+        <div class="MOBILEnavBar">
+            <h4 class="title"><a href="/index.html">Benjamin MacLeod</a></h4>
+            <div class="navRight">
+                <h5 class="icon-toggle" id="mobiledarktoggle">
+                    <a class="material-symbols-outlined icon-outline">dark_mode</a>
+                    <a class="material-symbols-outlined icon-filled">dark_mode</a>
+                </h5>
+            </div>
+        </div>
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+    const desktopToggle = document.getElementById("darkModeToggle");
+    const mobileToggle = document.getElementById("mobiledarktoggle");
+    const toggles = [desktopToggle, mobileToggle];
 
-            toggleBtn.addEventListener("click", () => {
-                document.body.classList.toggle("dark-mode");
-                toggleBtn.classList.toggle("active");
+    // Safety check
+    if (!desktopToggle || !mobileToggle) {
+        console.warn("One or more toggle buttons not found.");
+    }
 
-                if (document.body.classList.contains("dark-mode")) {
-                    localStorage.setItem("theme", "dark");
-                } else {
-                    localStorage.setItem("theme", "light");
-                }
-            });
+    // Apply saved theme
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+        toggles.forEach(toggle => toggle?.classList.add("active"));
+    }
 
-            window.addEventListener("DOMContentLoaded", () => {
-                const savedTheme = localStorage.getItem("theme");
-                if (savedTheme === "dark") {
-                    document.body.classList.add("dark-mode");
-                    toggleBtn.classList.add("active");
-                }
-            });
-        </script>
+    // Toggle handler
+    function handleToggle() {
+        document.body.classList.toggle("dark-mode");
+
+        const isDark = document.body.classList.contains("dark-mode");
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+
+        // Update all toggle buttons
+        toggles.forEach(toggle => toggle?.classList.toggle("active"));
+    }
+
+    // Attach event listeners
+    toggles.forEach(toggle => {
+        toggle?.addEventListener("click", (e) => {
+            e.preventDefault();
+            handleToggle();
+        });
+    });
+});
+</script>
+
         <!-- Main Content -->
         <div class="mainContent">
             <div class="homeBio">
@@ -102,7 +128,7 @@
                 </a>
             </div>
 
-            <h1 class="h1-underline"><a href="/projects.html">Recent Projects</a></h1>
+            <h1 class="h1-underline"><a href="/projects.html">Featured Projects</a></h1>
             <div class="video-div">
                 <div class="video-wrapper">
                     <iframe
@@ -145,6 +171,7 @@
                 </p>
                 <ul>
                     <li>Produce training videos to be used for onboarding and training employees</li>
+                    <li>Collaborated with experienced employees to create clear and detailed documentation for complex production processes</li>
                 </ul>
             </div>
 
@@ -298,16 +325,16 @@
                 Benjamin MacLeod. All Rights Reserved.
             </p>
             <div class="social-bar">
-                <a href="mailto:you@example.com" class="social-icon" title="Email">
+                <a href="mailto:me@benjaminmacleod.com" class="social-icon" title="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
-                <a href="https://linkedin.com/in/yourusername" class="social-icon" title="LinkedIn" target="_blank">
+                <a href="https://www.linkedin.com/in/benjaminmacleod/" class="social-icon" title="LinkedIn" target="_blank">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://instagram.com/yourusername" class="social-icon" title="Instagram" target="_blank">
+                <a href="https://www.instagram.com/benjamin_macleod/" class="social-icon" title="Instagram" target="_blank">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="https://youtube.com/@yourchannel" class="social-icon" title="YouTube" target="_blank">
+                <a href="https://www.youtube.com/@benjaminmacleod" class="social-icon" title="YouTube" target="_blank">
                     <i class="fab fa-youtube"></i>
                 </a>
             </div>
