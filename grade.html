@@ -1,66 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Grade Converter</title>
+  <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!--Meta - Title-->
+        <title>Grade Converter | Benjamin MacLeod</title>
+
+        <!--Meta - Favicon-->
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+        <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+        <link rel="shortcut icon" href="/assets/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="BM" />
+        <link rel="manifest" href="/assets/site.webmanifest" />
+
+        <!--Meta - Style-->
+        <link rel="stylesheet" type="text/css" href="/style.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dark_mode,menu" />
+
+        <!--Meta - Facebook-->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Experience | Benjamin MacLeod" />
+        <meta property="og:image" content="https://benjaminmacleod.com/images/portrait_landscape.jpg" />
+        <meta property="og:image:alt" content="A portrait of Benjamin MacLeod standing in front of a forest in fall" />
+        <meta
+            property="og:description"
+            content="My name is Benjamin MacLeod, and I am pursuing a Bachelor of Business Administration at Acadia University." />
+        <meta property="og:locale" content="en_US" />
+        <meta property="article:author" content="Benjamin MacLeod" />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      padding: 2em;
-      background-color: #f4f4f4;
     }
     .container {
-      max-width: 400px;
-      margin: auto;
+      max-width: 40em;
+      margin-left: auto;
+      margin-right: auto;
       background: white;
       padding: 2em;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    input, button {
+    input {
       width: 100%;
-      padding: 0.8em;
+      margin-left: auto;
+      margin-right: auto;
+      box-sizing: border-box;
+    }
+    
+    button {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      cursor: pointer;
+      
+    }
+    
+    #percentage {
       margin-top: 1em;
-      font-size: 1em;
+      font-family: Merriweather, serif;
+      font-weight: 800;
+      font-size: 1.5em;
+      color: #000;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      padding-left: 0.75em;
+      padding-right: 0.5em;
+      background-color: #eeeeee;
+      border: none;
+      border-radius: 0.3em;
     }
     #result {
       margin-top: 1em;
-      font-weight: bold;
-      font-size: 1.2em;
+      font-family: Merriweather, serif;
+      font-weight: 800;
+      font-size: 1.6em;
       color: #333;
+      text-align: center;
     }
+    .letterValue {
+      font-family: Inter, sans-serif;
+      font-weight: 800;
+      font-size: 2.5em;
+      color: #76abae;
+    }
+    .letterValue:hover {
+    }
+    
+    #convert {
+      margin-top: 1em;
+      font-family: Inter, sans-serif;
+      font-weight: 800;
+      font-size: 1.5em;
+      color: #ffffff;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      background-color: #76abae;
+      border: none;
+      border-radius: 0.3em;
+    }
+    
   </style>
 </head>
 <body>
   <div class="container">
-    <h2>Grade Converter</h2>
-    <label for="percentage">Enter Percentage Grade:</label>
+    <h1>Grade Converter</h1>
+    <label for="percentage"><p>Enter Percentage Grade:</p></label>
     <input type="number" id="percentage" min="0" max="100" placeholder="e.g. 70">
-    <button onclick="convertGrade()">Convert</button>
+    <button id="convert" onclick="convertGrade()">Convert</button>
     <div id="result"></div>
   </div>
 
   <script>
-    function convertGrade() {
-      const grade = parseFloat(document.getElementById('percentage').value);
-      let letter = '';
+function convertGrade() {
+  const grade = parseFloat(document.getElementById('percentage').value);
+  let letter = '';
+  let message = '';
 
-      if (grade >= 90) letter = 'A+';
-      else if (grade >= 85) letter = 'A';
-      else if (grade >= 80) letter = 'A-';
-      else if (grade >= 77) letter = 'B+';
-      else if (grade >= 73) letter = 'B';
-      else if (grade >= 70) letter = 'B-';
-      else if (grade >= 67) letter = 'C+';
-      else if (grade >= 63) letter = 'C';
-      else if (grade >= 60) letter = 'C-';
-      else if (grade >= 57) letter = 'D+';
-      else if (grade >= 53) letter = 'D';
-      else if (grade >= 50) letter = 'D-';
-      else letter = 'F';
+  if (grade >= 90) { letter = 'A+'; message = '4.33 GPA'; }
+  else if (grade >= 85) { letter = 'A'; message = '4.00 GPA'; }
+  else if (grade >= 80) { letter = 'A-'; message = '3.67 GPA'; }
+  else if (grade >= 77) { letter = 'B+'; message = '3.33 GPA'; }
+  else if (grade >= 73) { letter = 'B'; message = '3.00 GPA'; }
+  else if (grade >= 70) { letter = 'B-'; message = '2.67 GPA'; }
+  else if (grade >= 67) { letter = 'C+'; message = '2.33 GPA'; }
+  else if (grade >= 63) { letter = 'C'; message = '2.00 GPA'; }
+  else if (grade >= 60) { letter = 'C-'; message = '1.67 GPA'; }
+  else if (grade >= 57) { letter = 'D+'; message = '1.33 GPA'; }
+  else if (grade >= 53) { letter = 'D'; message = '1.00 GPA'; }
+  else if (grade >= 50) { letter = 'D-'; message = '0.67 GPA'; }
+  else { letter = 'F'; message = '0'; }
 
-      document.getElementById('result').textContent = `Letter Grade: ${letter}`;
-    }
+  document.getElementById('result').innerHTML = `
+    Letter Grade:<br>
+    <div>
+    <a class="letterValue">${letter}</a><br>
+    <a class="msg">${message}</a>
+    </div>
+  `;
+}
   </script>
+  
 </body>
 </html>
