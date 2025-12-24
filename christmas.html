@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Handlee&display=swap" rel="stylesheet">
+        <title>Title</title>
+        <style>
+            body {
+                background-color: #eef2e9;
+            }
+            
+            .content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 85vh;
+                padding-left: 2em;
+                padding-right: 2em;
+            }
+            
+            .card {
+                border: solid;
+                border-radius: 1em;
+                border-width: 0;
+                background-color: #ffffff;
+                width: fit-content;
+                padding: 2em;
+                margin: auto;
+                display: block;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+                justify-items: center;
+            }
+            
+            @keyframes card {
+                from {
+                    transform: translate(-300px, 200px);
+                    opacity: 0;
+                }
+                
+                to {
+                    transform: translate(0, 0);
+                    opacity: 1;
+                }
+            }
+            
+            .card {
+                opacity: 0; /* initial state */
+                transform: translate(-300px, 200px);
+            }
+            
+            .card.animate {
+                animation: card 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            }
+            
+            h1 {
+                text-align: center;
+                font-size: 4em;
+                font-family: "Caveat Brush";
+                line-height: 1;
+                color: #425940;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
+            
+            h2 {
+                text-align: center;
+                font-size: 1.5em;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+                font-family: "Handlee";
+                color: #425940;
+            }
+            
+            p {
+                font-family: "Handlee";
+                text-align: center;
+                font-size: 1.3em;
+                color: #000;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
+            
+            .tree {
+                width: 10em;
+                padding: auto;
+                margin: auto;
+                display: flex;
+                justify-content: center;
+            }
+            
+            #overlay {
+                position: fixed;
+                inset: 0;                /* top:0 right:0 bottom:0 left:0 */
+                background: #eef2e9;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 9999;           /* above everything */
+            }
+            
+            .overlayElements {
+                background-color: #ffffff;
+                padding: 2em;
+                border-radius: 1em;
+            }
+            
+            #overlay button {
+                font-size: 2.5rem;
+                padding: 1rem 2rem;
+                margin-top: 1em;
+                background-color: #eef2e9;
+                color: #425940;
+                font-family: "Caveat Brush";
+                border-radius: 0.8em;
+                cursor: pointer;
+                border-width: 0;
+            }
+            #overlay {
+                transition: opacity 0.6s ease;
+            }
+
+            #overlay.fade {
+                opacity: 0;
+                pointer-events: none;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="overlay">
+        <div class="overlayElements">
+        <img class="tree" src="/card/tree.png">
+        <button id="enter">Open Card</button>
+        </div>
+        </div>
+        <div class="content">
+        <div class="card">
+            <img class="tree" src="/card/tree.png">
+            <h1>Merry Christmas!</h1>
+            <h2>Wishing you a Merry Christmas</h2>
+            <p>From, Ben</p>
+            <audio id="bgm" loop>
+                <source src="/card/music.mp3" type="audio/mpeg">
+            </audio>
+            <script>
+              const overlay = document.getElementById("overlay");
+              const enterBtn = document.getElementById("enter");
+              const audio = document.getElementById("bgm");
+              const card = document.querySelector(".card");
+
+              enterBtn.addEventListener("click", () => {
+                // Start background music (user gesture)
+                audio.play().catch(() => {});
+
+                // Fade out overlay
+                overlay.classList.add("fade");
+
+                // Start card animation AFTER overlay starts fading
+                card.classList.add("animate");
+
+                // Remove overlay from DOM after fade completes
+                setTimeout(() => {
+                  overlay.remove();
+                }, 600); // must match CSS transition duration
+              });
+            </script>
+        </div>
+        </div>
+    </body>
+</html>
