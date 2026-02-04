@@ -625,11 +625,11 @@ body.dark-mode .social-icon:hover {
 @media screen and (max-width:700px){
   
   .desktopJustify {
-    text-align: left;
+    text-align: left !important;
   }
   .videoCredit {
   font-size: 1.1em;
-  text-align: left;
+  text-align: left !important;
 }
   .homePfp {
     display: none
