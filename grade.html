@@ -107,7 +107,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>Grade Converter</h1>
+    <h1>Percent to Letter / GPA</h1>
     <label for="percentage"><p>Enter Percentage Grade:</p></label>
     <input type="number" id="percentage" min="0" max="100" placeholder="e.g. 70">
     <button id="convert" onclick="convertGrade()">Convert</button>
@@ -132,7 +132,7 @@ function convertGrade() {
   else if (grade >= 57) { letter = 'D+'; message = '1.33 GPA'; }
   else if (grade >= 53) { letter = 'D'; message = '1.00 GPA'; }
   else if (grade >= 50) { letter = 'D-'; message = '0.67 GPA'; }
-  else { letter = 'F'; message = '0'; }
+  else { letter = 'F'; message = '0 GPA'; }
 
   document.getElementById('result').innerHTML = `
     Letter Grade:<br>
