@@ -94,7 +94,7 @@ h5 {
 h1 {
   font-size: 2.5rem;
   font-weight: 800;
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", "Tahoma", sans-serif;
 }
 
 h2 {
@@ -104,25 +104,25 @@ h2 {
 h3 {
   font-size: 1.75rem;
   font-weight: 800;
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", "Tahoma", sans-serif;
 }
 
 h4 {
   font-size: 1.5rem;
   font-weight: 800;
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", "Tahoma", sans-serif;
 }
 
 h5 {
   font-size: 1.25rem;
   font-weight: 500;
-  font-family: "Merriweather", serif;
+  font-family: "Merriweather", "Georgia", serif;
 }
 
 /* Paragraphs */
 p {
   margin: 1em 0;
-  font-family: "Merriweather", serif;
+  font-family: "Merriweather", "Georgia", serif;
   font-weight: 500;
   font-size: 1.15em;
 }
@@ -184,7 +184,7 @@ th {
 }
 
 .title {
-  font-family: "Merriweather", serif;
+  font-family: "Merriweather", "Georgia", serif;
   font-weight: 800;
   color: #222831;
   transition: ease-in, 0.3s;
@@ -261,7 +261,7 @@ h4.title a {
 }
 
 .navLink {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", "Tahoma", sans-serif;
   font-weight: 500;
   color: #222831;
   vertical-align: middle;
@@ -279,7 +279,7 @@ h4.title a {
 }
 
 .navLink:hover {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", "Tahoma", sans-serif;
   font-weight: 800;
 text-shadow: 0 0 20px #eeeeee77;
     transition: ease-in, 0.3s;
@@ -476,7 +476,7 @@ p {
 
 .smalltext {
   font-size: 0.8em;
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", "Tahoma", sans-serif;
   font-weight: 600;
   text-decoration: underline;
   text-decoration-color: #222831;
@@ -486,7 +486,7 @@ p {
 .footText {
   padding-top: 0;
   font-size: 0.8em;
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", "Tahoma", sans-serif;
   font-weight: 600;
   text-align: center;
 }
@@ -512,14 +512,14 @@ p {
   padding-bottom: 0.3em;
 }
 .resumePlace {
-  font-family: "Merriweather", serif;
+  font-family: "Merriweather", "Georgia", serif;
   font-style: oblique 20deg;
   font-weight: 700; /* or 700 if you want bold italic */
 }
 
 .resumeTitle {
   font-size: 0.8em;
-  font-family: "Merriweather", serif;
+  font-family: "Merriweather", "Georgia", serif;
   font-weight: 600;
 }
 
@@ -556,7 +556,7 @@ p {
 }
 
 li {
-  font-family: "Merriweather", serif;
+  font-family: "Merriweather", "Georgia", serif;
   font-weight: 600;
   font-style: normal;
   padding-bottom: 10px;
@@ -728,7 +728,7 @@ body.dark-mode .social-icon:hover {
 }
 
 .navLink {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", "Tahoma", sans-serif;
   font-weight: 500;
   color: #222831;
   vertical-align: middle;
@@ -746,7 +746,7 @@ body.dark-mode .social-icon:hover {
 }
 
 .navLink:hover {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", "Tahoma", sans-serif;
   font-weight: 800;
 text-shadow: 0 0 20px #eeeeee77;
     transition: ease-in, 0.3s;
@@ -810,14 +810,14 @@ body.dark-mode .full-screen-menu {
 }
 
   .mobileMenuButton {
-    font-family: Inter;
+    font-family: Inter "Tahoma", sans-serif;
     font-weight: 500;
         transition: ease-in, 0.3s;
 
   }
   
     .mobileMenuButton:hover {
-    font-family: Inter;
+    font-family: Inter "Tahoma", sans-serif;
     font-weight: 800;
         transition: ease-in, 0.3s;
     text-shadow: 0 0 20px #eeeeee;
@@ -872,7 +872,7 @@ body.dark-mode .full-screen-menu {
 
 h2.videoProjectTitle {
   font-weight: 800;
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", "Tahoma", sans-serif;
 }
 
 .desktopJustify {
