@@ -20,6 +20,17 @@ body.dark-mode .smalltext:hover {
   color: #eeeeee;
 }
 
+
+::selection {
+  background-color: #76abae;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #76abae;
+  color: white;
+}
+
 a.smalltext {
   text-decoration: none;
   color: #76abae;
