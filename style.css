@@ -590,6 +590,64 @@ li::marker {
   padding-top: 0.5em;
 }
 
+.label-ai-assisted {
+  height: 24px;
+  width: 100%;
+  background-image: url(assets/AI_assisted.svg);
+  background-repeat: no-repeat;
+  margin: auto;
+  background-position: center;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border: 0;
+}
+body.dark-mode .label-ai-assisted {
+  height: 24px;
+  width: 100%;
+  background-image: url(assets/AI_assisted-dark.svg);
+  background-repeat: no-repeat;
+  margin: auto;
+  background-position: center;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border: 0;
+}
+
+.example-ai-assisted {
+  height: 50px;
+  background-image: url(assets/AI_assisted.svg);
+  background-repeat: no-repeat;
+  margin: auto;
+  background-position-x: left;
+  background-position-y: center;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  border: 0;
+}
+body.dark-mode .example-ai-assisted {
+  height: 50px;
+  background-image: url(assets/AI_assisted-dark.svg);
+  background-repeat: no-repeat;
+  margin: auto;
+  background-position-x: left;
+  background-position-y: center;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  border: 0;
+}
+
+a.AIdecl {
+  color: #222831;
+  text-decoration: underline;
+  transition: ease-in-out 0.3s;
+}
+
+a.AIdecl:hover {
+  color: #76abae;
+  text-decoration: underline;
+  transition: ease-in-out 0.3s;
+}
+
 .social-icon {
   background-color: #76abae; /* Blue background */
   color: #eeeeee; /* Icon color */
