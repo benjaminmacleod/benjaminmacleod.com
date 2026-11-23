@@ -1,0 +1,193 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Meta - Title-->
+    <title>GenAI | Benjamin MacLeod</title>
+
+    <!--Meta - Favicon-->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="BM" />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+
+    <!--Meta - Style-->
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dark_mode,menu" />
+
+    <!--Meta - Facebook-->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="GenAI | Benjamin MacLeod" />
+    <meta property="og:image" content="https://benjaminmacleod.com/images/portrait_landscape.jpg" />
+    <meta property="og:image:alt" content="A portrait of Benjamin MacLeod standing in front of a forest in fall" />
+    <meta
+      property="og:description"
+      content="My name is Benjamin MacLeod, and I am pursuing a Bachelor of Business Administration at Acadia University." />
+    <meta property="og:locale" content="en_US" />
+    <meta property="article:author" content="Benjamin MacLeod" />
+    <style></style>
+  </head>
+  <body>
+ <div id="fullScreenMenu" class="full-screen-menu">
+        <button id="closeMenu" class="close-btn">×</button>
+        <nav>
+            <a class="mobileMenuButton" data-text="Home" href="/index.html">Home</a>
+            <a class="mobileMenuButton" data-text="Projects" href="/projects.html">Projects</a>
+            <a class="mobileMenuButton" data-text="About" href="/about.html">About</a>
+        </nav>
+    </div>
+        <div class="navBar">
+            <h4 class="title"><a href="/index.html">Benjamin MacLeod</a></h4>
+            <div class="navRight">
+                <h5><a class="navLink" data-text="Home" href="/index.html">Home</a></h5>
+                <h5><a class="navLink" data-text="Projects" href="/projects.html">Projects</a></h5>
+                <h5><a class="navLink" data-text="About" href="/about.html">About</a></h5>
+                <h5 class="icon-toggle" id="darkModeToggle">
+                    <a class="material-symbols-outlined icon-outline">dark_mode</a>
+                    <a class="material-symbols-outlined icon-filled">dark_mode</a>
+                </h5>
+            </div>
+        </div>
+        <div class="MOBILEnavBar">
+            <h4 class="title"><a href="/index.html">Benjamin MacLeod</a></h4>
+            <div class="navRight">
+                    <h5 class="icon-toggle menu-toggle" id="menuToggle">
+                    <span class="material-symbols-outlined icon-outline">menu</span>
+                    <span class="material-symbols-outlined icon-filled">menu</span>
+                </h5>
+                <h5 class="icon-toggle" id="mobiledarktoggle">
+                    <a class="material-symbols-outlined icon-outline">dark_mode</a>
+                    <a class="material-symbols-outlined icon-filled">dark_mode</a>
+                </h5>
+
+            </div>
+            
+        </div>
+    
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menuToggle");
+    const fullScreenMenu = document.getElementById("fullScreenMenu");
+    const closeMenu = document.getElementById("closeMenu");
+
+    if (!menuToggle || !fullScreenMenu || !closeMenu) {
+        console.warn("Missing toggle, menu, or close button element.");
+        return;
+    }
+
+    // Open the menu
+    menuToggle.addEventListener("click", () => {
+        fullScreenMenu.classList.add("active");
+    });
+
+    // Close the menu with button
+    closeMenu.addEventListener("click", () => {
+        fullScreenMenu.classList.remove("active");
+    });
+
+    // Close the menu with ESC key
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            fullScreenMenu.classList.remove("active");
+        }
+    });
+});
+</script>
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+    const desktopToggle = document.getElementById("darkModeToggle");
+    const mobileToggle = document.getElementById("mobiledarktoggle");
+    const toggles = [desktopToggle, mobileToggle];
+
+    // Safety check
+    if (!desktopToggle || !mobileToggle) {
+        console.warn("One or more toggle buttons not found.");
+    }
+
+    // Apply saved theme
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+        toggles.forEach(toggle => toggle?.classList.add("active"));
+    }
+
+    // Toggle handler
+    function handleToggle() {
+        document.body.classList.toggle("dark-mode");
+
+        const isDark = document.body.classList.contains("dark-mode");
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+
+        // Update all toggle buttons
+        toggles.forEach(toggle => toggle?.classList.toggle("active"));
+    }
+
+    // Attach event listeners
+    toggles.forEach(toggle => {
+        toggle?.addEventListener("click", (e) => {
+            e.preventDefault();
+            handleToggle();
+        });
+    });
+});
+</script>
+    <div class="mainContent">
+        <h1 class="h1-underline"><a href="/genai.html">Generative AI (GenAI)</a></h1>
+        
+        <p>Artificial intelligence has increasingly become embedded in our technology and day to day lives. As an individual who regularly posts content to the internet, I believe it is important for me to disclose where I stand on AI, and how I use the technology when posting content. </p>
+        
+        <h4>AI Acknowledgement</h4>
+        <p>As noted in the footer of this website, I have used Generative AI to assist with the development of benjaminmacleod.com. As per my personal <a class="resumeLink" href="policies/genai.pdf">AI Use Policy</a>, AI assisted content is defined as being "created by a human but used AI during the creative process to modify a portion of the content". It is for this reason that the "AI Assisted" label has been appended to all pages on <a class="resumeLink" href="benjaminmacleod.com">benjaminmacleod.com</a>.</p>
+        
+        <br>
+        <div class="example-ai-assisted"></div>
+        <p class="photoCredit">'AI Assisted' label | <i>Personal Policy for Use of Generative AI (GenAI) Online</i></p>
+        <br>
+        
+        <p>For <a class="resumeLink" href="benjaminmacleod.com">benjaminmacleod.com</a>, I used a variety of AI programs (usually ChatGPT or Microsoft Copilot) to help generate Javascript snippets and debug issues with my CSS. Whenever GenAI was/is used for the development of this website, I manually review all code snippets.</p>
+        
+        <h4>Why use AI?</h4>
+        <p>I have a basic understanding of HTML and CSS. Where possible, I try to manage my own website and blog’s codebase. I made the decision to use AI as a tool so I could continue to write HTML/CSS (something I enjoy) without getting burnt out of the project. AI provided me the ability to write some of my own code instead of using Google Sites, which is not as customizable. For clarity, I did not ask AI to “Generate me a website”. This website took (and continues to take) many hours of my life to maintain.</p>
+        
+        <p><b>Another important note:</b> I do not use tools like Codex as I do not trust giving AI tools access to my device.</p>
+        
+        <h4>What about my other content?</h4>
+        <p>I have written a detailed <a class="resumeLink" href="policies/genai.pdf">AI Use Policy</a> that outlines how I plan to use AI for creating online content. Since AI is constantly changing, this document will be updated regularly. I encourage anyone with an online presence to consider developing their own version of this document.</p>
+
+      <hr class="gradient-hr" />
+
+      <p class="footText">
+        Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Benjamin MacLeod. All Rights Reserved.
+      </p>
+        <div class="ai-declaration">
+            <div class="label-ai-assisted"></div>
+            <p class="footText"><a href="/genai.html" class="AIdecl">What does this mean?</a></p>
+            </div>
+      <div class="social-bar">
+                <a href="mailto:me@benjaminmacleod.com" class="social-icon" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/benjaminmacleod/" class="social-icon" title="LinkedIn" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/benjamin_macleod/" class="social-icon" title="Instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/@benjaminmacleod" class="social-icon" title="YouTube" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+    </div>
+  </body>
+</html>
