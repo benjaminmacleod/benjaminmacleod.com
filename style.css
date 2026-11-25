@@ -343,7 +343,8 @@ a::before {
 
 #about-img {
     width: 14em;
-    height: fit-content;
+    height: auto;
+    object-fit: contain;
 }
 
 @media (max-width: 730px) {
@@ -397,10 +398,14 @@ a::before {
 
 .social-container {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 1em;
     margin-top: 1em;
     margin-bottom: 1em;
+}
+
+.social-container-footer {
+    justify-content: center;
 }
 
 .social-icon {
